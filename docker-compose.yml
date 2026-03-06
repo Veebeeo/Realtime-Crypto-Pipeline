@@ -28,10 +28,10 @@ services:
     image: postgres:15
     environment:
       POSTGRES_USER: crypto_user
-      POSTGRES_PASSWORD: crypto_password
+      POSTGRES_PASSWORD: crypto_passVB123
       POSTGRES_DB: crypto_db
     ports:
-      - "5432:5432"
+      - "5454:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
