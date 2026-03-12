@@ -1,10 +1,12 @@
 import json
+import os
 import time
 import pandas as pd
 from kafka import KafkaConsumer
 from sqlalchemy import create_engine
+from dotenv import load_dotenv
 
-DB_URL = "postgresql://crypto_user:crypto_password@127.0.0.1:5454/crypto_db"
+DB_URL = os.getenv("DATABASE_URL")
 engine = create_engine(DB_URL)
 
 BATCH_SIZE = 50
@@ -16,7 +18,8 @@ def consume_and_load():
         bootstrap_servers=['localhost:9092'],
         auto_offset_reset='latest',
         enable_auto_commit=True,
-        value_deserializer=lambda x: json.loads(x.decode('utf-8'))
+        value_deserializer=lambda x: json.loads(x.decode('utf-8')),
+        api_version=(2, 5, 0)
     )
 
     print("Starting Consumer, Listening to Kafka topic 'crypto_prices'")

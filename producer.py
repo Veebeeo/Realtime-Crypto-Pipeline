@@ -5,7 +5,8 @@ from kafka import KafkaProducer
 #Initializing kafka
 producer = KafkaProducer(
     bootstrap_servers=['localhost:9092'],
-    value_serializer=lambda v: json.dumps(v).encode('utf-8')
+    value_serializer=lambda v: json.dumps(v).encode('utf-8'),
+    api_version=(2, 5, 0)
 )
 
 TOPIC_NAME = 'crypto_prices'
