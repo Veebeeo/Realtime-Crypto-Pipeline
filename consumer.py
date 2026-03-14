@@ -6,10 +6,12 @@ from kafka import KafkaConsumer
 from sqlalchemy import create_engine
 from dotenv import load_dotenv
 
+load_dotenv()
+
 DB_URL = os.getenv("DATABASE_URL")
 engine = create_engine(DB_URL)
 
-BATCH_SIZE = 50
+BATCH_SIZE = 5
 RETRY_DELAY = 5
 
 def consume_and_load():
@@ -36,7 +38,7 @@ def consume_and_load():
             try:
 
                 df = pd.DataFrame(batch)
-                df['event_time'] = pd.to_datetime(df['event_time'], unit='ms')
+                df['event_time'] = pd.to_datetime(df['event_time'], unit='ms') + pd.Timedelta(hours=5, minutes=30)
 
                 df['trade_value'] = df['price'] * df['quantity']
                 df.to_sql('btc_trades', engine, if_exists='append', index=False)
