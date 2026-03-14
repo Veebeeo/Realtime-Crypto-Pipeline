@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="957pt" height="235pt" viewBox="0.00 0.00 957.00 235.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 231.4)">
+<title>Architecture</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-231.4 953.18,-231.4 953.18,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_docker</title>
+<polygon fill="none" stroke="#8b93a5" stroke-dasharray="5,2" points="486.62,-33.4 486.62,-219.4 676.8,-219.4 676.8,-33.4 486.62,-33.4"/>
+<text xml:space="preserve" text-anchor="middle" x="581.71" y="-202.8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14.00" fill="#8b93a5">Docker Compose Environment</text>
+</g>
+<!-- Binance -->
+<g id="node1" class="node">
+<title>Binance</title>
+<path fill="#f3ba2f" stroke="black" stroke-width="0" d="M79.3,-189.1C79.3,-191.64 61.53,-193.7 39.65,-193.7 17.77,-193.7 0,-191.64 0,-189.1 0,-189.1 0,-147.7 0,-147.7 0,-145.16 17.77,-143.1 39.65,-143.1 61.53,-143.1 79.3,-145.16 79.3,-147.7 79.3,-147.7 79.3,-189.1 79.3,-189.1"/>
+<path fill="none" stroke="black" stroke-width="0" d="M79.3,-189.1C79.3,-186.56 61.53,-184.5 39.65,-184.5 17.77,-184.5 0,-186.56 0,-189.1"/>
+<text xml:space="preserve" text-anchor="middle" x="39.65" y="-172" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.00">Binance API</text>
+<text xml:space="preserve" text-anchor="middle" x="39.65" y="-157.6" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.00">(WebSocket)</text>
+</g>
+<!-- Producer -->
+<g id="node2" class="node">
+<title>Producer</title>
+<path fill="#2d3142" stroke="black" stroke-width="0" d="M339.5,-186.8C339.5,-186.8 267.18,-186.8 267.18,-186.8 261.18,-186.8 255.18,-180.8 255.18,-174.8 255.18,-174.8 255.18,-162 255.18,-162 255.18,-156 261.18,-150 267.18,-150 267.18,-150 339.5,-150 339.5,-150 345.5,-150 351.5,-156 351.5,-162 351.5,-162 351.5,-174.8 351.5,-174.8 351.5,-180.8 345.5,-186.8 339.5,-186.8"/>
+<text xml:space="preserve" text-anchor="middle" x="303.34" y="-172" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.00" fill="white">Python Producer</text>
+<text xml:space="preserve" text-anchor="middle" x="303.34" y="-157.6" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.00" fill="white">(Extraction)</text>
+</g>
+<!-- Binance&#45;&gt;Producer -->
+<g id="edge1" class="edge">
+<title>Binance-&gt;Producer</title>
+<path fill="none" stroke="#8b93a5" stroke-width="1.5" d="M79.13,-168.4C79.13,-168.4 243.27,-168.4 243.27,-168.4"/>
+<polygon fill="#8b93a5" stroke="#8b93a5" stroke-width="1.5" points="243.27,-171.9 253.27,-168.4 243.27,-164.9 243.27,-171.9"/>
+<text xml:space="preserve" text-anchor="middle" x="167.24" y="-171.4" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10.00" fill="#4f5d75"> Live BTC/USDT Trades </text>
+</g>
+<!-- Kafka -->
+<g id="node3" class="node">
+<title>Kafka</title>
+<path fill="#e94560" stroke="black" stroke-width="0" d="M620.36,-186.8C620.36,-186.8 542.06,-186.8 542.06,-186.8 536.06,-186.8 530.06,-180.8 530.06,-174.8 530.06,-174.8 530.06,-162 530.06,-162 530.06,-156 536.06,-150 542.06,-150 542.06,-150 620.36,-150 620.36,-150 626.36,-150 632.36,-156 632.36,-162 632.36,-162 632.36,-174.8 632.36,-174.8 632.36,-180.8 626.36,-186.8 620.36,-186.8"/>
+<text xml:space="preserve" text-anchor="middle" x="581.21" y="-172" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.00" fill="white">Apache Kafka</text>
+<text xml:space="preserve" text-anchor="middle" x="581.21" y="-157.6" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.00" fill="white">(Message Broker)</text>
+</g>
+<!-- Producer&#45;&gt;Kafka -->
+<g id="edge2" class="edge">
+<title>Producer-&gt;Kafka</title>
+<path fill="none" stroke="#8b93a5" stroke-width="1.5" d="M351.42,-168.4C351.42,-168.4 518.16,-168.4 518.16,-168.4"/>
+<polygon fill="#8b93a5" stroke="#8b93a5" stroke-width="1.5" points="518.16,-171.9 528.16,-168.4 518.16,-164.9 518.16,-171.9"/>
+<text xml:space="preserve" text-anchor="middle" x="423.06" y="-171.4" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10.00" fill="#4f5d75"> Publish to Topic </text>
+</g>
+<!-- Consumer -->
+<g id="node5" class="node">
+<title>Consumer</title>
+<path fill="#2d3142" stroke="black" stroke-width="0" d="M925.02,-158.8C925.02,-158.8 834.39,-158.8 834.39,-158.8 828.39,-158.8 822.39,-152.8 822.39,-146.8 822.39,-146.8 822.39,-134 822.39,-134 822.39,-128 828.39,-122 834.39,-122 834.39,-122 925.02,-122 925.02,-122 931.02,-122 937.02,-128 937.02,-134 937.02,-134 937.02,-146.8 937.02,-146.8 937.02,-152.8 931.02,-158.8 925.02,-158.8"/>
+<text xml:space="preserve" text-anchor="middle" x="879.71" y="-144" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.00" fill="white">Python Consumer</text>
+<text xml:space="preserve" text-anchor="middle" x="879.71" y="-129.6" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.00" fill="white">(Transform &amp; Load)</text>
+</g>
+<!-- Kafka&#45;&gt;Consumer -->
+<g id="edge3" class="edge">
+<title>Kafka-&gt;Consumer</title>
+<path fill="none" stroke="#8b93a5" stroke-width="1.5" d="M632.18,-154.4C632.18,-154.4 810.3,-154.4 810.3,-154.4"/>
+<polygon fill="#8b93a5" stroke="#8b93a5" stroke-width="1.5" points="810.3,-157.9 820.3,-154.4 810.3,-150.9 810.3,-157.9"/>
+<text xml:space="preserve" text-anchor="middle" x="739.52" y="-171.4" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10.00" fill="#4f5d75"> Stream &amp; Batch </text>
+</g>
+<!-- Postgres -->
+<g id="node4" class="node">
+<title>Postgres</title>
+<path fill="#336791" stroke="black" stroke-width="0" d="M642.03,-87.1C642.03,-89.64 614.77,-91.7 581.21,-91.7 547.65,-91.7 520.39,-89.64 520.39,-87.1 520.39,-87.1 520.39,-45.7 520.39,-45.7 520.39,-43.16 547.65,-41.1 581.21,-41.1 614.77,-41.1 642.03,-43.16 642.03,-45.7 642.03,-45.7 642.03,-87.1 642.03,-87.1"/>
+<path fill="none" stroke="black" stroke-width="0" d="M642.03,-87.1C642.03,-84.56 614.77,-82.5 581.21,-82.5 547.65,-82.5 520.39,-84.56 520.39,-87.1"/>
+<text xml:space="preserve" text-anchor="middle" x="581.21" y="-70" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.00" fill="white">PostgreSQL Database</text>
+<text xml:space="preserve" text-anchor="middle" x="581.21" y="-55.6" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.00" fill="white">(Storage)</text>
+</g>
+<!-- PowerBI -->
+<g id="node6" class="node">
+<title>PowerBI</title>
+<path fill="#f2c811" stroke="black" stroke-width="0" d="M937.18,-36.8C937.18,-36.8 822.23,-36.8 822.23,-36.8 816.23,-36.8 810.23,-30.8 810.23,-24.8 810.23,-24.8 810.23,-12 810.23,-12 810.23,-6 816.23,0 822.23,0 822.23,0 937.18,0 937.18,0 943.18,0 949.18,-6 949.18,-12 949.18,-12 949.18,-24.8 949.18,-24.8 949.18,-30.8 943.18,-36.8 937.18,-36.8"/>
+<text xml:space="preserve" text-anchor="middle" x="879.71" y="-22" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.00">Power BI</text>
+<text xml:space="preserve" text-anchor="middle" x="879.71" y="-7.6" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.00">(DirectQuery Dashboard)</text>
+</g>
+<!-- Postgres&#45;&gt;PowerBI -->
+<g id="edge5" class="edge">
+<title>Postgres-&gt;PowerBI</title>
+<path fill="none" stroke="#8b93a5" stroke-width="1.5" d="M642.03,-66.4C711.65,-66.4 816.18,-66.4 816.18,-66.4 816.18,-66.4 816.18,-48.82 816.18,-48.82"/>
+<polygon fill="#8b93a5" stroke="#8b93a5" stroke-width="1.5" points="819.68,-48.82 816.18,-38.82 812.68,-48.82 819.68,-48.82"/>
+<text xml:space="preserve" text-anchor="middle" x="739.52" y="-21.4" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10.00" fill="#4f5d75"> Live Querying </text>
+</g>
+<!-- Consumer&#45;&gt;Postgres -->
+<g id="edge4" class="edge">
+<title>Consumer-&gt;Postgres</title>
+<path fill="none" stroke="#8b93a5" stroke-width="1.5" d="M822.54,-132.55C750.84,-132.55 637.18,-132.55 637.18,-132.55 637.18,-132.55 637.18,-102.18 637.18,-102.18"/>
+<polygon fill="#8b93a5" stroke="#8b93a5" stroke-width="1.5" points="640.68,-102.18 637.18,-92.18 633.68,-102.18 640.68,-102.18"/>
+<text xml:space="preserve" text-anchor="middle" x="739.52" y="-96.4" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="10.00" fill="#4f5d75"> SQL Insert </text>
+</g>
+</g>
+</svg>
