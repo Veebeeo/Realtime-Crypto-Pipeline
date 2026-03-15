@@ -23,6 +23,7 @@ This project captures live BTC/USDT market data via WebSocket, streams it throug
 
 ## Live Dashboard Features
 
+https://github.com/user-attachments/assets/da922faa-2db0-42ac-95b6-206e3be79797
 
 
 * **Sub-Second Latency:** Visuals update continuously using DirectQuery and custom DAX time-filtering.
